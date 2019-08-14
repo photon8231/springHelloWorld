@@ -180,7 +180,8 @@ public class ShiroConfig {
         for (String nonePermissionRe : NONE_PERMISSION_RES) {
             hashMap.put(nonePermissionRe, "anon");
         }
-        hashMap.put("/**", "user");
+
+        hashMap.put("/**", "anon");
         shiroFilter.setFilterChainDefinitionMap(hashMap);
         return shiroFilter;
     }
